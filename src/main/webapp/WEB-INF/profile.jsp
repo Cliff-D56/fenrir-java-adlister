@@ -10,7 +10,9 @@
 
     <div class="container">
         <h1>Viewing your profile.</h1>
-        <h1></h1>
+<%--<h1>${sessionScope.user}</h1>--%>
+        <%request.setAttribute("user",session.getAttribute("user"));%>
+        <h1> Hello <%=session.getAttribute("user")%></h1>
     </div>
 
 </body>
