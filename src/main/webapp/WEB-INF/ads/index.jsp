@@ -8,9 +8,13 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<c:if test="${sessionScope.login == 'Logout'}">
+    <hi>SHIT</hi>
+</c:if>
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+
+    <h1>${sessionScope.login == "Logout"}</h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
